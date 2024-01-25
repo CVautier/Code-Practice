@@ -1,0 +1,17 @@
+class Solution:                                     # remove all duplicates from an increasing list of numbers
+    def removeDuplicates(self, nums: List[int]) -> int:
+      
+        i=0
+
+
+        while i <len(nums):
+            j=i+1
+            while j < len(nums):    #loops checking all numbers bigger than i which can be done since list is ordered 
+                if nums[i]==nums[j]:        #if a duplicate is found removes it
+                    nums.remove(nums[i])
+                else:                       #if a duplicate is not found checks the next number in list
+                    j+=1
+                    
+            i+=1                    #checks for dupes of the next target number
+                    
+                    
